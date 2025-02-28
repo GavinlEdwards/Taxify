@@ -6,7 +6,7 @@ public class Statistics implements IStatistics {
     private int ratings;
     private int stars;
     private int distance;
-    private int billing;
+    private double billing;
     
     public Statistics() {
         this.services = 0;
@@ -39,7 +39,7 @@ public class Statistics implements IStatistics {
     }
     
     @Override
-    public int getBilling() {
+    public double getBilling() {
         return this.billing;
     }
     
@@ -64,7 +64,7 @@ public class Statistics implements IStatistics {
     }
     
     @Override
-    public void updateBilling(int billing) {
+    public void updateBilling(double billing) {
         this.billing = this.billing + billing;
     }    
 }
