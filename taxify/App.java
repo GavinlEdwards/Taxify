@@ -7,6 +7,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import taxify.EVehicles.EBike;
+import taxify.EVehicles.Scooter;
 import taxify.Interfaces.IDriver;
 import taxify.Interfaces.IUser;
 import taxify.Interfaces.IVehicle;
@@ -78,6 +80,13 @@ public class App {
         IVehicle vehicle9 = new Taxi(9,ApplicationLibrary.randomLocation() );
         IVehicle vehicle10 = new Taxi(10,ApplicationLibrary.randomLocation() );
         
+        IVehicle evehicle11 = new Scooter(11,ApplicationLibrary.getChargingStation());
+        IVehicle evehicle12 = new Scooter(12,ApplicationLibrary.getChargingStation());
+        IVehicle evehicle13 = new EBike(13,ApplicationLibrary.getChargingStation());
+        IVehicle evehicle14 = new EBike(14,ApplicationLibrary.getChargingStation());
+        IVehicle evehicle15 = new Scooter(15,ApplicationLibrary.getChargingStation());
+
+
         vehicle1.setDriver(driver1);
         vehicle2.setDriver(driver2);
         vehicle3.setDriver(driver3);
@@ -103,7 +112,11 @@ public class App {
         vehicles.add(vehicle8);
         vehicles.add(vehicle9);
         vehicles.add(vehicle10);
-
+        vehicles.add(evehicle11);
+        vehicles.add(evehicle12);
+        vehicles.add(evehicle13);
+        vehicles.add(evehicle14);
+        vehicles.add(evehicle15);
         // Instaniates company and simulator
         TaxiCompany company = new TaxiCompany("company1", users, vehicles);
         ApplicationSimulator simulator = new ApplicationSimulator(company, users, vehicles);
